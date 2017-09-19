@@ -22,7 +22,8 @@
   $('#selectId').on('change', function() {
       page = $(this).val();
       setPage(page);
-      //   console.log($(this));
+      //   实现页面刷新
+      location.href = "#";
   })
 
 
