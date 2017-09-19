@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>国内折扣</title>
+
+    <!-- Bootstrap -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../less/discount_price/list.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--头部国内折扣  -->
+    <div class="discout_header">
+        <div class="back">
+            <a href="../index.html">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </a>
+        </div>
+        <h1> <a href="javascript:window.scrollTo( 0, 0 );">国内折扣</a> </h1>
+        <div class="home_app">
+            <a href="#">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--列表  -->
+    <div class="list_content">
+        <div id="row_list" class="row">
+            <!--引擎模板  -->
+        </div>
+
+    </div>
+
+
+    <!-- 底部导航栏 -->
+    <div class="footer_nav">
+        <ul class="clearfix">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li>
+                <a href="#">
+                    <span class="myiconfont">&#xe69e;</span> 返回顶部</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部脚本  -->
+    <footer>
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> --掌上比价平台</p>
+        <p><a href="javascript:;">m.manmanbuy.com</a></p>
+    </footer>
+
+
+
+
+    <!--列表动态渲染引擎模板  -->
+    <script type="text/template" id="list_tlp">
+        {{each $data list_data i}}
+        <!--传送id  -->
+        <a id='list_go' href="./discount_price/list_introduce.html?data-id={{list_data.productId}}">
+            <div class="col-xs-6">
+                <div class="img">
+                    {{@list_data.productImg}}
+                </div>
+                <div class="title">{{list_data.productName}}</div>
+                <div class="price">{{list_data.productPrice}}</div>
+                <div class="info">
+                    <div class="_mall">{{list_data.productFrom}}|{{list_data.productTime}}</div>
+                </div>
+            </div>
+
+        </a>
+        {{/each}}
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/jquery/template-web.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/common/unit.js"></script>
+    <script src="../js/discount_price/list.js"></script>
+</body>
+
+</html>

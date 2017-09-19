@@ -1,0 +1,156 @@
+@import '../base.less';
+@color:#ff841d;
+@color_c:#ebebeb;
+a{
+  display: inline;
+}
+// 头部
+header{
+  background: @color;
+  width: 100%;
+  height: 51px;
+  .header_logo{
+    padding: 13px 20px;
+    img{
+       width: 185.5px;
+       height: 25px;
+    }
+  }
+  .header_app{
+    padding: 8px 10px;
+    img{
+       width: 34px;
+       height: 34px;
+    }
+  }
+}
+
+// 搜索框
+.search{
+  width: 100%;
+  height: 51px;
+  padding: 10px;
+  position: relative;
+  background: #fff;
+  input[type=text]{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 95%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    border: none;
+    border-radius: 15px;
+    background: #f1f1f1;
+    font-size: 16px;
+  }
+  input[type=button]{
+    width: 63px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    background: @color;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+.count_nav{
+  padding-left: 10px;
+  height: 36px;
+  line-height: 36px;
+  margin-top:20px;
+
+  background-color: @color_c;
+  a{
+    color: #555;
+  }
+}
+// 内容部分
+.brand{
+  padding-bottom: 5px;
+  background-color: @color_c;
+    .hot{
+      background-color: #f7f7f7;
+      margin: 10px;
+      font-size: 12px;
+      padding: 10px;
+      text-align: left;
+      color: #999;
+      
+    }
+    .nav_content{
+      color: #666;
+      font-size: 12px;
+      margin: 10px;
+      background-color: #fff;
+      line-height: 20px;
+      padding: 10px;
+    }
+  
+}
+.c_content{
+  overflow: hidden;
+  ul{
+    li{
+      width: 25%;
+      float: left;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+       
+    }
+  }
+}
+.active{
+  color: #ed0000;
+}
+.line{
+  border-top: 1px solid #ccc;
+  .modity-left{
+    img{
+      width: 120px;
+    }
+  }
+  .media-body{
+    width: 100px;
+    h2{
+      color:#ed0000;
+    }
+    }
+  }
+
+// 底部
+#ctl00_footerApp{
+  background-color: @color_c;
+  text-align: center;
+
+.foot_top{
+  height: 33px;
+  border: 1px solid #ccc;
+  margin-top: 25px;
+  a{
+    float: left;
+    line-height: 33px;
+    height: 100%; 
+    width: 33.33%;
+    border-right: 1px solid #ccc;
+  }
+ 
+}
+.footer{
+
+  padding: 15px;
+  p{
+    a{
+      font-size: 12px;
+    }
+    font-size: 12px;
+    margin: 0;
+  }
+}
+}

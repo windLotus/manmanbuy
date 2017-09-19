@@ -1,0 +1,194 @@
+@import '../base.less';
+@import '../getcategory_font/iconfont.css';
+@color: #ff841d;
+// 头部
+header {
+    background: @color;
+    width: 100%;
+    height: 51px;
+    .header_logo {
+        padding: 13px 20px;
+        img {
+            width: 185.5px;
+            height: 25px;
+        }
+    }
+    .header_app {
+        padding: 8px 10px;
+        img {
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+
+// 搜索框
+.search {
+    width: 100%;
+    height: 51px;
+    padding: 10px;
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    input[type=text] {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 95%;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 30px;
+        border: none;
+        border-radius: 15px;
+        background: #f1f1f1;
+        font-size: 16px;
+    }
+    input[type=button] {
+        width: 63px;
+        height: 30px;
+        border-radius: 15px;
+        border: none;
+        background: @color;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+
+// 分类导航栏
+.list_nav {
+    position: relative;
+    ul {
+        li {
+            float: left;
+            height: 41px;
+            line-height: 41px; // text-align: center;
+            color: #5a5a5a;
+        }
+    }
+    input {
+        position: absolute;
+        width: 63px;
+        height: 30px;
+        border-radius: 10px;
+        right: 20px;
+        top: 5px;
+    }
+}
+
+// 列表展示
+.list_show {
+    padding: 7px;
+    ul {
+        width: 100%;
+        a {
+            height: 140px;
+            width: 100%;
+            li {
+                height: 140px;
+                width: 100%;
+                img {
+                    width: 120px;
+                    height: 120px;
+                }
+                .prd_dep {
+                    width: 100%;
+                    height: 41px;
+                    overflow: hidden;
+                    word-break: break-all;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                }
+                .prd_price {
+                    padding: 5px;
+                    color: red;
+                }
+                .prd_other {
+                    width: 100%;
+                    color: #a1a1a1;
+                    font-size: 12px;
+                    padding: 5px;
+                    .prd_shop {}
+                    .prd_show {}
+                }
+            }
+        }
+    }
+}
+
+// 列表工具栏
+.list_tool {
+    ul {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 20px;
+        padding-bottom: 0;
+        li {
+            float: left;
+            width: 33.333%;
+            height: 40px;
+            text-align: center;
+            input {
+                width: 100px;
+                height: 40px;
+                background: #e2e2e2;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            #selectId{
+                height: 40px;
+            }
+        }
+    }
+}
+
+ // 底部
+.body_footer {
+    background: #f2f2f2;
+}
+
+
+// 底部导航栏
+.footer_nav {
+    padding-top: 20px;
+    ul {
+        width: 100%;
+        li {
+            float: left;
+            width: 33.33%;
+            height: 34px;
+            line-height: 34px;
+            font-size: 16px;
+            color: #5a5a5a;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+        li:last-child {
+            border-right: none;
+        }
+    }
+}
+
+// 底部脚本
+footer {
+    p {
+        text-align: center;
+        margin: 0;
+        color: #5a5a5a;
+        font-size: 14px;
+        a {
+            display: inline;
+        }
+    }
+    p:first-child {
+        a:first-child {
+            color: red;
+        }
+    }
+}

@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #666;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 解决点击高亮*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+a {
+  display: inline;
+}
+header {
+  background: #ff841d;
+  width: 100%;
+  height: 51px;
+}
+header .header_logo {
+  padding: 13px 20px;
+}
+header .header_logo img {
+  width: 185.5px;
+  height: 25px;
+}
+header .header_app {
+  padding: 8px 10px;
+}
+header .header_app img {
+  width: 34px;
+  height: 34px;
+}
+.search {
+  width: 100%;
+  height: 51px;
+  padding: 10px;
+  position: relative;
+  background: #fff;
+}
+.search input[type=text] {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 95%;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 30px;
+  border: none;
+  border-radius: 15px;
+  background: #f1f1f1;
+  font-size: 16px;
+}
+.search input[type=button] {
+  width: 63px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  background: #ff841d;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+.count_nav {
+  padding-left: 10px;
+  height: 36px;
+  line-height: 36px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #ebebeb;
+}
+.count_nav a {
+  color: #555;
+}
+.brand {
+  background-color: #ebebeb;
+}
+.brand .hot {
+  font-size: 16px;
+  height: 40px;
+  padding-left: 10px;
+  line-height: 40px;
+  margin: 10px 5px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  color: #874604;
+}
+.brand .hot-brand {
+  padding: 0px 10px;
+}
+.brand .hot-brand li a {
+  height: 40px;
+  line-height: 40px;
+  color: #000;
+  font-size: 16px;
+  display: block;
+  padding-left: 0px;
+  border-bottom: 1px solid #ccc;
+}
+.brand .hot-brand li span {
+  color: #666;
+  font-size: 16px;
+  line-height: 40px;
+  padding-right: 20px;
+}
+.number {
+  width: 50px;
+  height: 50px;
+}
+#ctl00_footerApp {
+  background-color: #ebebeb;
+  text-align: center;
+}
+#ctl00_footerApp .foot_top {
+  height: 33px;
+  border: 1px solid #ccc;
+  margin-top: 25px;
+}
+#ctl00_footerApp .foot_top a {
+  float: left;
+  line-height: 33px;
+  height: 100%;
+  width: 33.33%;
+  border-right: 1px solid #ccc;
+}
+#ctl00_footerApp .footer {
+  padding: 15px;
+}
+#ctl00_footerApp .footer p {
+  font-size: 12px;
+  margin: 0;
+}
+#ctl00_footerApp .footer p a {
+  font-size: 12px;
+}

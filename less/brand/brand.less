@@ -1,0 +1,142 @@
+@import '../base.less';
+@color:#ff841d;
+@color_c:#ebebeb;
+a{
+  display: inline;
+}
+// 头部
+header{
+  background: @color;
+  width: 100%;
+  height: 51px;
+  .header_logo{
+    padding: 13px 20px;
+    img{
+       width: 185.5px;
+       height: 25px;
+    }
+  }
+  .header_app{
+    padding: 8px 10px;
+    img{
+       width: 34px;
+       height: 34px;
+    }
+  }
+}
+
+// 搜索框
+.search{
+  width: 100%;
+  height: 51px;
+  padding: 10px;
+  position: relative;
+  background: #fff;
+  input[type=text]{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 95%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    border: none;
+    border-radius: 15px;
+    background: #f1f1f1;
+    font-size: 16px;
+  }
+  input[type=button]{
+    width: 63px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    background: @color;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+.count_nav{
+  padding-left: 10px;
+  height: 36px;
+  line-height: 36px;
+  // margin-top:20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: @color_c;
+  a{
+    color: #555;
+  }
+}
+// 内容部分
+.brand{
+  background-color: @color_c;
+    .hot{
+      font-size: 16px;
+      height: 40px;
+      padding-left: 10px;
+      line-height: 40px;
+      margin: 10px 5px;
+      border: 1px solid #ccc;
+      background-color: #eee;
+      color: #874604;
+    }
+    .hot-brand{
+      padding: 0px 10px;
+      li{
+        a{
+          height: 40px;
+          line-height: 40px;
+          color: #000;
+          font-size: 16px;
+          display: block;
+          padding-left: 0px;
+          border-bottom: 1px solid #ccc;
+        }
+        span{
+          color: #666;
+          font-size: 16px;
+          line-height: 40px;
+          padding-right: 20px;
+        }
+      }
+      
+    }
+}
+.number{
+  width: 50px;
+  height: 50px;
+}
+// 底部
+#ctl00_footerApp{
+  background-color: @color_c;
+  text-align: center;
+
+.foot_top{
+  height: 33px;
+  border: 1px solid #ccc;
+  margin-top: 25px;
+  a{
+    float: left;
+    line-height: 33px;
+    height: 100%; 
+    width: 33.33%;
+    border-right: 1px solid #ccc;
+  }
+ 
+}
+.footer{
+
+  padding: 15px;
+  p{
+    a{
+      font-size: 12px;
+    }
+    font-size: 12px;
+    margin: 0;
+  }
+}
+}

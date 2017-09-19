@@ -1,0 +1,157 @@
+@import '../base.less';  
+@import '../getcategory_font/iconfont.css';
+@color:#ff841d;
+
+body{
+   background: #efefef;
+}
+// 头部
+header{
+  background: @color;
+  width: 100%; 
+  height: 51px;
+  .header_logo{
+    padding: 13px 20px;
+    img{
+       width: 185.5px;
+       height: 25px;
+    }
+  }
+  .header_app{
+    padding: 8px 10px;
+    img{
+       width: 34px;
+       height: 34px;
+    }
+  }
+}
+
+// 搜索框
+.search{
+  width: 100%;
+  height: 51px;
+  padding: 10px;
+  position: relative;
+  background: #fff;
+  input[type=text]{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 95%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    border: none;
+    border-radius: 15px;
+    background: #f1f1f1;
+    font-size: 16px;
+  }
+  input[type=button]{
+    width: 63px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    background: @color;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+// 列表展示
+.listBox{
+  width: 100%;
+  padding: 5px;
+  background: #f2f2f2;
+  ul{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #ebebeb;
+    li{
+      width: 100%;
+      border-bottom:1px solid #ccc; 
+    .listTitle{
+    position: relative;
+    padding:10px 17px;
+    background: #ebebeb;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: '黑体';
+   span{
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    color: #888888;
+    font-size: 18px;
+    font-weight: 100;
+   } 
+  }
+  .list_nav{
+      display: none;
+      width: 100%;
+      background: #fff;
+      border-radius: 0px;
+    li{
+      float: left;
+      width: 33.3333%;
+      height: 40px;
+      line-height: 20px;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      border-right:1px solid #ccc;
+      border-bottom: 1px solid #ccc; 
+    }
+    li:nth-child(3n){
+      border-right:none;
+    }
+  }
+  }
+  }
+  
+}
+
+// 底部导航栏
+.footer_nav{
+  padding-top: 20px;
+  ul{
+    width: 100%;
+    li{
+      float: left;
+      width: 33.33%;
+      height: 34px;
+      line-height: 34px;
+      font-size: 16px;
+      color: #5a5a5a;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+    }
+    li:last-child{
+      border-right: none;
+    }
+  }
+}
+
+// 底部
+footer{
+  p{
+    text-align: center;
+    margin:0;
+    color: #5a5a5a;
+    font-size: 14px;
+      a{
+      display: inline;
+    
+    }  
+  }
+  p:first-child{
+      a:first-child{
+        color: red;
+      }
+  }
+}

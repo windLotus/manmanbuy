@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+
+    <title>商品详情页</title>
+
+    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../less/getcategory/getproduct.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header class="clearfix">
+        <div class="header_logo pull-left">
+            <a href="../../index.html"> <img src="../../images/header_logo.png" alt=""></a>
+        </div>
+        <div class="header_app pull-right">
+            <a href="#"> <img src="../../images/header_app.png" alt=""></a>
+        </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </div>
+
+    <!-- 分类导航栏 -->
+    <div class="list_nav">
+        <ul class="clearfix">
+            <li><a href="../../index.html">首页&nbsp;>&nbsp;</a></li>
+            <li><a> 商品列表&nbsp;>&nbsp;</a> </li>
+            <li><span>gagagag</span>&nbsp;>&nbsp;</li>
+
+            <!-- 导航栏模板 -->
+        </ul>
+        <input type="button" value="筛选">
+    </div>
+
+    <!-- 商品展示 -->
+    <div class="product_show">
+
+    </div>
+
+    <!-- 网友评价 -->
+    <div class="comEvaluate">
+        <div class="com_title">
+            网友评价
+        </div>
+        <div class="com_list">
+            <!-- 评论展示模板 -->
+        </div>
+        <div class="moreCom">
+            <input type="button" value="查看更多评价">
+        </div>
+    </div>
+
+    <!-- 底部  -->
+    <div class="body_footer">
+        <!-- 底部导航栏 -->
+        <div class="footer_nav">
+            <ul class="clearfix">
+                <li><a href="javascript:;">登录</a></li>
+                <li><a href="javascript:;">注册</a></li>
+                <li>
+                    <a href="#">
+                        <span class="myiconfont">&#xe69e;</span> 返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 底部脚本   -->
+        <footer>
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a> --掌上比价平台</p>
+            <p><a href="javascript:;">m.manmanbuy.com</a></p>
+        </footer>
+    </div>
+
+    <!-- 商品展示模板 -->
+    <script type="text/template" id="product_show_tpl">
+        {{ each $data good}}
+        <div class="good_img">
+            <p>{{good.productName}}</p>
+            {{@good.productImg}}
+            <div class="collect"><a href="javascript:;">收 藏</a></div>
+        </div>
+        <div class="good_list">
+            <ul class="clearfix">
+                <li><a href="javascript:;">比价购买</a></li>
+                <li><a href="javascript:;">产品参数</a></li>
+                <li><a href="javascript:;">评价(2322)</a></li>
+            </ul>
+
+            <!-- 京东商城 -->
+            <div class="jd_shop">
+                <div class="jd_top">
+                    {{@good.bjShop}}
+                </div>
+                <div class="jd_bottom">
+                    <p> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+                </div>
+            </div>
+        </div>
+
+        {{/each}}
+    </script>
+
+    <!-- 评论展示模板 -->
+    <script type="text/template" id="com_list_tpl">
+        <ul>
+            {{each $data com }}
+            <li>
+                <div class="com_top clearfix">
+                    <div class="com_left pull-left">{{ com.comName }}</div>
+                    <div class="com_right pull-right">
+                        <div class="time">{{ com.comTime }}</div>
+                        <div class="add">
+                            {{ com.comFrom }}
+                        </div>
+                    </div>
+                </div>
+                <div class="com_bottom">
+                    {{ com.comContent }}
+                </div>
+            </li>
+            {{ /each }}
+        </ul>
+    </script>
+
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../lib/jquery/template-web.js"></script>
+    <script src="../../js/getcategory/getproduct.js"></script>
+</body>
+
+</html>

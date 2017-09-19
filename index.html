@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="less/index.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="logo fl clearfix">
+            <!-- 左边 -->
+            <a href="#" title="慢慢买移动版">
+                <img src="./images/header_logo.png" alt="慢慢买移动版">
+            </a>
+        </div>
+        <!-- 右边 -->
+        <div class="app fr clearfix">
+            <a href="javascript:;" title="手机app下载">
+                <img src="./images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </div>
+    <!-- 搜索框 -->
+    <form action="">
+        <div class="search clearfix">
+            <div class="search_text ">
+                <input type="text" placeholder="请输入你想搜索的商品">
+            </div>
+            <div class="search_button">
+                <input type="submit" value="搜索">
+            </div>
+        </div>
+    </form>
+
+    <!-- 导航栏 -->
+    <div class="nav">
+        <form id="menus_Form" action="">
+            <div class="menus_one">
+                <!--引擎模板菜单栏  -->
+            </div>
+
+            <!-- 折扣推荐 -->
+            <a href="#">
+                <div class="recommend clearfix">
+                    <span>超值折扣推荐</span>
+                    <img src="images/more.png" alt="">
+                </div>
+            </a>
+
+            <!-- 产品介绍 -->
+            <div class="introduce" id="media_Form">
+                <!--使用媒体对象  -->
+
+                <!--渲染折扣列表数据引擎模板  -->
+
+
+            </div>
+            <!--更多信息  -->
+            <div class="more_bar">
+                <a href="#">
+                  更多优惠信息 »
+                </a>
+            </div>
+            <!--品牌推荐  -->
+            <a href="#">
+                <div class="recommend clearfix">
+                    <span>品牌排行</span>
+                    <img src="images/more.png" alt="">
+                </div>
+            </a>
+
+        </form>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="footer_nav">
+        <ul class="clearfix">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li>
+                <a href="#">
+                    <span class="myiconfont">&#xe69e;</span> 返回顶部</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部脚本  -->
+    <footer>
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> --掌上比价平台</p>
+        <p><a href="javascript:;">m.manmanbuy.com</a></p>
+    </footer>
+</body>
+
+<!--引擎模板菜单栏 栅栏系统  -->
+<script type="text/template" id="menus_tlp">
+    <div id='nav_three_row' class="row">
+        {{each $data dataValue i}}
+        <div class="col-xs-3" data-id="{{dataValue.indexmenuId}}">
+            <a href="./html/{{ dataValue.titlehref }}">
+                <div class="img_over">
+                    {{@dataValue.img}}
+                </div>
+                <div class="text_down">
+                    {{dataValue.name}}
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<!--数据列表渲染引擎  -->
+<script type="text/template" id="link_tlp">
+    {{each $data link_value i}}
+    <a href="./html/discount_price/list_introduce.html?productId={{link_value.productId}}">
+        <div class="media" data-id='{{link_value.productId}}'>
+            <div class="media-left media-middle">
+                {{@link_value.productImgSm}}
+            </div>
+            <div class="media-body">
+                <div class="title">
+                    {{link_value.productName}} {{link_value.productComCount}}
+                    <span>{{link_value.productPinkage}}</span>
+                </div>
+                <div class="other">
+                    <span class='small'>{{link_value.productFrom}} | {{link_value.productTime}}</span>
+                    <span class="comment">
+                                <i class="my_iconfont">&#xe60b;</i>
+                              </span>
+                </div>
+            </div>
+        </div>
+    </a>
+    {{/each}}
+</script>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="lib/jquery/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/jquery/template-web.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+
+    <title>国内比价 </title>
+
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../less/getcategory/category.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header class="clearfix">
+        <div class="header_logo pull-left">
+            <a href="../index.html"> <img src="../images/header_logo.png" alt=""></a>
+        </div>
+        <div class="header_app pull-right">
+            <a href="#"> <img src="../images/header_app.png" alt=""></a>
+        </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </div>
+
+    <!-- 列表展示 -->
+    <div class="listBox">
+        <!-- 商品菜单模板占位 -->
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="footer_nav">
+        <ul class="clearfix">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li>
+                <a href="#">
+                    <span class="myiconfont">&#xe69e;</span> 返回顶部</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部脚本  -->
+    <footer>
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> --掌上比价平台</p>
+        <p><a href="javascript:;">m.manmanbuy.com</a></p>
+    </footer>
+
+
+    <!-- 商品菜单标题模板 -->
+    <script type="text/template" id="listBox_tpl">
+        <ul>
+            {{ each $data title i }}
+            <li class="">
+                <div class="listTitle" data-id="{{ title.titleId }}">{{ title.title }}
+                    <span class="glyphicon glyphicon-menu-down"></span>
+                </div>
+                <ul class="list_nav clearfix">
+                </ul>
+            </li>
+            {{ /each }}
+        </ul>
+
+    </script>
+
+    <!-- 商品菜单模板 -->
+    <script type="text/template" id="list_nav_tpl">
+        {{ each $data product i}}
+        <li data-id=" {{ product.categoryId }} "><a href="./getcategory/getcategory_Prolist.html?categoryid={{ product.categoryId }}">{{ product.category }}</a></li>
+        {{ /each }}
+    </script>
+
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/jquery/template-web.js"></script>
+    <script src="../js/getcategory/getcategory.js"></script>
+
+
+
+
+</body>
+
+</html>

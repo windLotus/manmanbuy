@@ -1,0 +1,141 @@
+/*头部*/
+.top{
+    width: 100%;
+    min-width: 350px;
+    height: 65px;
+    background-color: #ff841d;
+    display: flex;
+    flex-wrap:nowrap;
+    text-align: center;
+    line-height: 65px;
+    .left{
+        width: 65px;
+        position: relative;
+        a{
+            width: 30px;
+            height: 30px;
+            background: url(../img/icon_bar.png) no-repeat -206px -29px;
+            position: absolute;
+            left: 24px;top: 18px;
+        }
+    }
+    .center{
+        flex: 8;
+        p{
+            color: #FFF;
+            font-size: 20px; 
+            font-weight: 800;
+            font-family: "微软雅黑";
+        }
+    }
+    .right{
+        float: right;
+        width: 65px;
+        a{
+            position: relative;
+            img{
+                width: 40px;
+                height: 40px;
+                position:absolute;
+                right: 15px;
+                bottom: 10px;
+            }
+        }
+    }
+}
+
+/*内容*/
+.content{
+    .lists{
+        .list{
+            width: 400px;
+            height: 120px;
+            display: flex;
+            border-bottom: 1px solid #ccc; 
+            .left{
+                display: inline-block;
+                float: left;
+                margin-top: 10px;
+                margin-left: 10px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .right{
+                display: inline-block;
+                height: 100px;
+                float: left;
+                margin-left: 5px;
+                margin-top: 20px;
+                .name{
+                    font-size: 16px;
+                    span{
+                        font-size: 18px;
+                        color: red;
+                    }
+                }
+                .shop{
+                    margin-top: 25px;
+                    position: relative;
+                    span{
+                        font-size: 12px;
+                        color: #666;
+                    }
+                    .icon{
+                        width: 50px;
+                        height: 24px;
+                        position: absolute;
+                        right: 0;bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*当前位置*/
+.place{
+    height: 42px;
+    background: #efefef;
+    a{
+        width: 55px;
+        font-size: 18px;
+        line-height: 42px;
+        margin-left: 10px;
+        float: left;
+    }
+}
+
+/*底部*/
+.bottom{
+    width: 100%;
+    min-width: 230px;
+    height: 140px;
+    background-color: #f7f7f7;
+    .table{
+        height: 40px;
+        a{ 
+            width: 33.33%;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #d5d5d5;
+        }
+    }
+    .down{
+        text-align: center;
+        .up{
+            font-size: 12px;
+            margin-top: 20px;
+            a{
+                display: inline;
+                color: red;
+                font-size: 12px;
+            }
+        }
+        p{
+            margin-top: 10px;
+        }
+    }
+}

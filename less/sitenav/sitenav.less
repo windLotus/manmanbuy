@@ -1,0 +1,125 @@
+ @import '../base.less';
+ @import '../getcategory_font/iconfont.css';
+
+ body{
+  background: #f2f2f2;
+ }
+ //  头部
+ header {
+     height: 44px;
+     background: #ff841d;
+     padding: 0 50px;
+     position: relative;
+     .header_back {
+         position: absolute; 
+         left: 14px;
+         a {
+             width: 50px;
+             height: 44px;
+             padding-top: 10px;
+             span {
+                 font-size: 20px;
+                 color: #fff;
+             }
+         }
+     }
+     .header_title {
+       width: 100%;
+       text-align: center;
+       height: 44px;
+       line-height: 44px;
+       font-size: 22px;
+       color: #fff;
+       font-weight: 600;
+
+     }
+     .header_app {
+         position: absolute;
+         top:0px;
+         right: 14px;
+         padding: 8px 0px;
+         img {
+             width: 34px;
+             height: 34px;
+         }
+     }
+ }
+
+ // 商店列表
+ .shop_list {
+   background: #fff;
+   padding-bottom: 20px;
+     ul {
+       padding: 10px 50px;
+         li {
+           float: left;
+           margin: 3px;
+           a{
+             padding: 10px;
+             background: #f4f4f4;
+             border: 1px solid #dcdcdc;
+             img{
+               display: inline-block;
+              width: 16px;
+              height: 16px;
+             }
+             span{}
+           }
+         }
+     }
+    .footerNav{
+      padding: 10px;
+      background:#ebebeb;
+      border: 1px solid #ebebeb;
+      a{
+        display: inline;
+        color: black;
+      }
+    }
+ }
+
+
+
+
+// 底部导航栏
+.footer_nav {
+    padding-top: 20px;
+    ul {
+        width: 100%;
+        margin-bottom: 0px;
+        li {
+            float: left;
+            width: 33.33%;
+            height: 34px;
+            line-height: 34px;
+            font-size: 16px;
+            color: #5a5a5a;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+        li:last-child {
+            border-right: none;
+        }
+    }
+}
+
+// 底部脚本
+footer {
+  padding-top:10px; 
+    p {
+        text-align: center;
+        margin: 0;
+        color: #5a5a5a;
+        font-size: 14px;
+        a {
+            display: inline;
+        }
+    }
+    p:first-child {
+        a:first-child {
+            color: red;
+        }
+    }
+}

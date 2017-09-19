@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../less/kfc.css">
+</head>
+
+<body>
+    <div id="kfc_headerApp" class="head">
+        <h1>
+            <span class="glyphicon glyphicon-menu-left fl back"></span> 肯德基优惠卷
+            <span class="xiazai fr"><img src="../images/header_app.png" alt=""></span>
+        </h1>
+    </div>
+    <!-- 内容部分 -->
+    <div id="kfc_content"></div>
+    <!-- //底部 -->
+    <footer>
+        <div id="" class="count_nav"><a class="" href="#">首页</a>&nbsp;&nbsp;>
+            <a class="" href="#">优惠券</a>
+        </div>
+        <div id="ctl00_footerApp">
+            <div class="foot_top">
+
+                <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+                <a href="reg.aspx">注册</a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-arrow-up"></span> 返回顶部
+                </a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">
+            慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/template" id="kfc_content_tpl">
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="http://d3.5ikfc.com/static/thumbs/917/kfc-5ikfc-91_p19.jpg" alt=" 两人餐 香辣鸡腿堡+新奥尔良烤鸡腿堡+新奥尔良烤翅2块+薯条(大)+百事可乐(中)+雪顶咖啡 2017年9月凭肯德基优惠券">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4>C19 两人餐 香辣鸡腿堡+新奥尔良烤鸡腿堡+新奥尔良烤翅2块+薯条(大)+百事可乐(中)+雪顶咖啡 2017年9月凭肯德基优惠券</h4>
+                <h2><span>￥</span> 64</h2>
+                <div class="kfc_time">有效期</div>
+            </div>
+        </div>
+    </script>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/jquery/template-web.js"></script>
+    <script src="../js/common/unit.js"></script>
+    <script src="../js/kfc.js"></script>
+
+</body>
+
+</html>

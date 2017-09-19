@@ -1,0 +1,150 @@
+@import '../getcategory_font/iconfont.css';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #666;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 解决点击高亮*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+body {
+  background: #f2f2f2;
+}
+header {
+  height: 44px;
+  background: #ff841d;
+  padding: 0 50px;
+  position: relative;
+}
+header .header_back {
+  position: absolute;
+  left: 14px;
+}
+header .header_back a {
+  width: 50px;
+  height: 44px;
+  padding-top: 10px;
+}
+header .header_back a span {
+  font-size: 20px;
+  color: #fff;
+}
+header .header_title {
+  width: 100%;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+}
+header .header_app {
+  position: absolute;
+  top: 0px;
+  right: 14px;
+  padding: 8px 0px;
+}
+header .header_app img {
+  width: 34px;
+  height: 34px;
+}
+.shop_list {
+  background: #fff;
+  padding-bottom: 20px;
+}
+.shop_list ul {
+  padding: 10px 50px;
+}
+.shop_list ul li {
+  float: left;
+  margin: 3px;
+}
+.shop_list ul li a {
+  padding: 10px;
+  background: #f4f4f4;
+  border: 1px solid #dcdcdc;
+}
+.shop_list ul li a img {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.shop_list .footerNav {
+  padding: 10px;
+  background: #ebebeb;
+  border: 1px solid #ebebeb;
+}
+.shop_list .footerNav a {
+  display: inline;
+  color: black;
+}
+.footer_nav {
+  padding-top: 20px;
+}
+.footer_nav ul {
+  width: 100%;
+  margin-bottom: 0px;
+}
+.footer_nav ul li {
+  float: left;
+  width: 33.33%;
+  height: 34px;
+  line-height: 34px;
+  font-size: 16px;
+  color: #5a5a5a;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.footer_nav ul li:last-child {
+  border-right: none;
+}
+footer {
+  padding-top: 10px;
+}
+footer p {
+  text-align: center;
+  margin: 0;
+  color: #5a5a5a;
+  font-size: 14px;
+}
+footer p a {
+  display: inline;
+}
+footer p:first-child a:first-child {
+  color: red;
+}

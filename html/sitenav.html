@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+
+    <title>商城导航 </title>
+
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../less/sitenav/sitenav.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header>
+        <div class="header_back">
+            <a href="../index.html"><span class="glyphicon glyphicon-menu-left"></span></a>
+        </div>
+        <div class="header_title">商城导航 </div>
+        <div class="header_app">
+            <a href="#"> <img src="../images/header_app.png" alt=""></a>
+        </div>
+    </header>
+
+    <!-- 商店列表 -->
+    <div class="shop_list">
+        <ul class="clearfix shop_list_ul">
+            <!-- 商店导航模板 -->
+        </ul>
+
+        <div class="footerNav">
+            <a href="../index.html">首页</a> > <a href="javascript:;">商城导航</a>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="footer_nav">
+        <ul class="clearfix">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li>
+                <a href="#">
+                    <span class="myiconfont">&#xe69e;</span> 返回顶部</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部脚本  -->
+    <footer>
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> --掌上比价平台</p>
+        <p><a href="#">m.manmanbuy.com</a></p>
+    </footer>
+
+    <!-- 商店导航模板 -->
+    <script type="text/template" id="shop_list_ul_tpl">
+        {{ each $data nav }}
+        <li>
+            <a href="{{ nav.navHref }}">
+                <img src="{{ nav.navImg }}" alt="">
+                <span>{{ nav.navTitle }}</span>
+            </a>
+        </li>
+
+        {{ /each }}
+
+    </script>
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/jquery/template-web.js"></script>
+
+    <script>
+        // 数据获取与模板喧染
+        $.ajax({
+            type: 'get',
+            url: 'http://139.199.192.48:9090/api/getsitenav',
+            success: function(data) {
+                $('.shop_list_ul').html(template('shop_list_ul_tpl', data.result));
+            }
+        });
+    </script>
+
+</body>
+
+</html>

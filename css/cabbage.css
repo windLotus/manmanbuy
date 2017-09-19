@@ -1,0 +1,193 @@
+/*头部*/
+.top {
+  width: 100%;
+  min-width: 350px;
+  height: 65px;
+  background-color: #ff841d;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  line-height: 65px;
+}
+.top .left {
+  width: 65px;
+  position: relative;
+}
+.top .left a {
+  width: 30px;
+  height: 30px;
+  background: url(../img/icon_bar.png) no-repeat -206px -29px;
+  position: absolute;
+  left: 24px;
+  top: 18px;
+}
+.top .center {
+  flex: 8;
+}
+.top .center p {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "微软雅黑";
+}
+.top .right {
+  float: right;
+  width: 65px;
+}
+.top .right a {
+  position: relative;
+}
+.top .right a img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+/*内容*/
+.content {
+  /*标签*/
+  /*商品*/
+}
+.content .bel {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  border-bottom: 6px solid #f7f7f7;
+  margin-bottom: 1px;
+}
+.content .bel .lists {
+  overflow: hidden;
+  width: 1000%;
+  height: 46px;
+}
+.content .bel .lists .list {
+  float: left;
+  line-height: 46px;
+  width: 52px;
+  text-align: center;
+}
+.content .commodity {
+  background: #f7f7f7;
+}
+.content .commodity ul {
+  margin-bottom: 0px;
+}
+.content .commodity ul li {
+  width: 100%;
+  height: 170px;
+  background: #FFF;
+  padding: 10px 5px;
+  margin: 6px auto;
+  position: relative;
+  min-width: 250px;
+}
+.content .commodity ul li .left {
+  float: left;
+}
+.content .commodity ul li .left img {
+  width: 130px;
+  height: 130px;
+  vertical-align: middle;
+}
+.content .commodity ul li .right {
+  word-wrap: normal;
+  margin-left: 5px;
+}
+.content .commodity ul li .right .up .t b {
+  word-wrap: break-word;
+}
+.content .commodity ul li .right .up .d {
+  margin-top: 10px;
+  color: red;
+  font-size: 20px;
+}
+.content .commodity ul li .right .up .d em {
+  margin-right: 2px;
+  color: red;
+}
+.content .commodity ul li .right .up .d del {
+  margin-left: 15px;
+}
+.content .commodity ul li .right .down {
+  margin-top: 20px;
+}
+.content .commodity ul li .right .down .t {
+  display: block;
+}
+.content .commodity ul li .right .down .t .bar b {
+  font-size: 14px;
+  color: red;
+  font-style: none;
+}
+.content .commodity ul li .right .down .t .bar span {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  border: 1px solid red;
+  background: #ffb7b7;
+  text-align: center;
+  border-radius: 10px;
+}
+.content .commodity ul li .right .down .d {
+  margin-top: 8px;
+}
+.content .commodity ul li .right .down .d a {
+  border: 1px dashed red;
+  text-align: center;
+  width: 120px;
+  height: 20px;
+  padding: 2px;
+  text-decoration: none;
+  position: absolute;
+  left: 140px;
+  bottom: 10px;
+}
+.content .commodity ul .buy {
+  float: left;
+  width: 64px;
+  background: #ff5e5d;
+  border-radius: 5px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border: none;
+  outline: none;
+  text-align: center;
+  line-height: 30px;
+}
+.content .commodity ul .buy a {
+  text-decoration: none;
+  color: #FFF;
+}
+.content .commodity ul .buy a:visited {
+  color: #FFF;
+}
+/*底部*/
+.bottom {
+  min-width: 230px;
+  height: 140px;
+  background-color: #f7f7f7;
+}
+.bottom .table {
+  height: 40px;
+}
+.bottom .table a {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #d5d5d5;
+}
+.bottom .down {
+  text-align: center;
+}
+.bottom .down .up {
+  font-size: 12px;
+}
+.bottom .down .up a {
+  display: inline;
+  color: red;
+  font-size: 12px;
+}

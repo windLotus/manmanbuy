@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>列表介绍</title>
+
+    <!-- Bootstrap -->
+    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../less/discount_price/list_introduce.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--头部国内折扣  -->
+    <div class="discout_header">
+        <div class="back">
+            <a href="../../index.html">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </a>
+        </div>
+        <h1> 国内折扣</h1>
+        <div class="home_app">
+            <a href="#">
+                <img src="../../images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--下部  -->
+    <form id="comment_Form" action="">
+
+    </form>
+
+    <!-- 底部导航栏 -->
+    <div class="footer_nav">
+        <ul class="clearfix">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li>
+                <a href="#">
+                    <span class="myiconfont">&#xe69e;</span> 返回顶部</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部脚本  -->
+    <footer>
+        <p>
+            <a href="javascript:;">手机APP下载</a>
+            <a href="javascript:;">慢慢买手机版</a> --掌上比价平台</p>
+        <p><a href="javascript:;">m.manmanbuy.com</a></p>
+    </footer>
+
+
+
+
+    <!--引擎模板渲染  -->
+    <script type="text/template" id="comment_tlp">
+        {{each $data dataValue i}}
+        <div class="container">
+            <input type="hidden" name='dataValue.productId' value="{{dataValue.productId}}">
+            <h3 class="title">{{dataValue.productName}}</h3>
+            <h4>{{dataValue.productPinkage}}</h4>
+            <div class="infor">
+                <span class="mall">{{dataValue.productFrom}}</span>
+                <span class="time">{{dataValue.productTime}}</span>
+                <span class="author">{{dataValue.productTips}}</span>
+            </div>
+            <!--图片和介绍  -->
+            <div class="content">
+                <div class="samll_wrap">
+                    {{@dataValue.productImg}}
+                </div>
+                <div class="big_wrap">
+                    {{@dataValue.productImg}}
+                </div>
+                <div class="content_down">
+                    <p>{{dataValue.productInfo}}</p>
+                </div>
+            </div>
+            <!--如果到时候有地址在这里添加代码  -->
+
+            <!--前往购买  -->
+            <div class="golink">
+                <a href="javascript:;">
+                    <span class="gobuy">前往购买</span>
+                </a>
+            </div>
+            <!--评论区  -->
+            <div class="commentBox">
+
+                <!--评论追加区  -->
+                <div class="list_comment">
+                    {{@dataValue.productComment}}
+                    <ul></ul>
+                </div>
+                <div>标签：
+                    <a href="javascript:;">{{dataValue.productName}}</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/jquery/template-web.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../js/discount_price/list_introduce.js"></script>
+</body>
+
+</html>
