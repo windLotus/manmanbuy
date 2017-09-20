@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #666;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 解决点击高亮*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+/*头部*/
+.top {
+  width: 100%;
+  min-width: 284px;
+  height: 65px;
+  background-color: #ff841d;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  line-height: 65px;
+}
+.top .left {
+  width: 65px;
+  position: relative;
+}
+.top .left a {
+  width: 30px;
+  height: 30px;
+  background: url(../images/icon_bar.png) no-repeat -206px -29px;
+  position: absolute;
+  left: 24px;
+  top: 18px;
+}
+.top .center {
+  flex: 8;
+}
+.top .center p {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "微软雅黑";
+}
+.top .right {
+  float: right;
+  width: 65px;
+}
+.top .right a {
+  position: relative;
+}
+.top .right a img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+/*内容*/
+.content .lists .list {
+  min-width: 320px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  font-family: "微软雅黑";
+  position: relative;
+  padding-top: 10px;
+}
+.content .lists .list .left {
+  display: inline-block;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.content .lists .list .left img {
+  width: 100px;
+  height: 100px;
+}
+.content .lists .list .right {
+  display: inline-block;
+  height: 100px;
+  float: left;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+.content .lists .list .right .name {
+  font-size: 12px;
+}
+.content .lists .list .right .name span {
+  font-size: 14px;
+  color: red;
+}
+.content .lists .list .right .shop {
+  margin-top: 25px;
+  position: relative;
+}
+.content .lists .list .right .shop span {
+  font-size: 12px;
+  color: #666;
+}
+.content .lists .icon {
+  width: 100px;
+  height: 24px;
+  right: -40px;
+  bottom: 0;
+  float: right;
+  position: absolute;
+  font-size: 12px;
+}
+.list_tool {
+  padding-bottom: 10px;
+}
+.list_tool ul {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 20px;
+  padding-bottom: 0;
+}
+.list_tool ul li {
+  float: left;
+  width: 33.333%;
+  height: 40px;
+  text-align: center;
+}
+.list_tool ul li input {
+  width: 100px;
+  height: 40px;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0, 0, 0, 0.03)), to(rgba(128, 128, 128, 0.37)));
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.list_tool ul li #selectId {
+  height: 40px;
+  width: 60%;
+}
+/*当前位置*/
+.place {
+  height: 42px;
+  background: #efefef;
+}
+.place a {
+  width: 55px;
+  font-size: 18px;
+  line-height: 42px;
+  margin-left: 10px;
+  float: left;
+}
+/*底部*/
+.bottom {
+  width: 100%;
+  min-width: 230px;
+  height: 140px;
+  background-color: #f7f7f7;
+}
+.bottom .table {
+  height: 40px;
+}
+.bottom .table a {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #d5d5d5;
+}
+.bottom .down {
+  text-align: center;
+}
+.bottom .down .up {
+  font-size: 14px;
+  margin-top: 20px;
+}
+.bottom .down .up a {
+  display: inline;
+  color: red;
+  font-size: 14px;
+}
+.bottom .down p {
+  margin-top: 10px;
+  font-size: 14px;
+}

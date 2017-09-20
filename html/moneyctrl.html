@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="" href="../less/moneyctrl.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--头部-->
+    <div class="top">
+        <div class="left">
+            <a href="../index.html"></a>
+        </div>
+        <div class="center">
+            <p>省钱控-最新优惠</p>
+        </div>
+        <div class="right">
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia&ckey=CK1360146084813">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+    <!--内容-->
+    <div class="content">
+        <ul class="lists" id="save-list">
+
+        </ul>
+    </div>
+
+    <!-- 列表工具栏 -->
+    <div class="list_tool">
+        <ul class="clearfix">
+            <li>
+                <a href="#"><input class="btn_prev" type="button" value="上一页"></a>
+            </li>
+            <li>
+                <select name="" id="selectId" class="form-control">
+                    </select>
+            </li>
+            <li>
+                <a href="#"><input class="btn_next" type="button" value="下一页"></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--当前位置-->
+    <div class="place">
+        <a href="../index.html">首页>></a>
+        <a href="#">省钱控</a>
+    </div>
+    <!--底部-->
+    <div class="bottom">
+        <div class="table">
+            <a href="javascript:;">登陆</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;">回到顶部</a>
+        </div>
+        <div class="down">
+            <p class="up">
+                <a href="javascript:;">手机APP下载</a> 慢慢买手机版 -- 掌上比价平台
+            </p>
+            <p class="com">m.manmanbuy.com</p>
+        </div>
+    </div>
+    <script type="text/template" id="save-tpl">
+        {{each $data save i}}
+        <a href="../html/discount_price/list_introduce.html?productId={{save.productId}}">
+            <li class="list">
+                <div class="left">
+                    {{@save.productImgSm}}
+                </div>
+                <div class="right">
+                    <div class="name">
+                        {{save.productName}}
+                        <span>{{save.productPinkage}}包邮（48-15券）</span>
+                    </div>
+                    <div class="shop">
+                        <span>{{save.productFrom}} | {{save.productTime}}</span>
+                    </div>
+                </div>
+                <div class="icon">{{save.productComCount}}</div>
+            </li>
+        </a>
+        {{/each}}
+    </script>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/jquery/template-web.js"></script>
+    <script src="../js/laopan/moneyctrl.js"></script>
+
+</body>
+
+</html>

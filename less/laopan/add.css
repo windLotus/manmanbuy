@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #666;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 解决点击高亮*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+/*头部*/
+.top {
+  width: 100%;
+  min-width: 350px;
+  height: 52px;
+  background-color: #ff841d;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  line-height: 65px;
+}
+.top .left {
+  width: 65px;
+  position: relative;
+}
+.top .left a {
+  width: 30px;
+  height: 30px;
+  background: url(../../images/icon_bar.png) no-repeat -206px -29px;
+  position: absolute;
+  left: 24px;
+  top: 12px;
+}
+.top .center {
+  flex: 8;
+}
+.top .center p {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "微软雅黑";
+}
+.top .right {
+  float: right;
+  width: 65px;
+}
+.top .right a {
+  position: relative;
+}
+.top .right a img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+}
+/*内容*/
+.content {
+  width: 100%;
+}
+.content .top {
+  height: 44px;
+  width: 100%;
+  background: #FFF;
+  border-bottom: 1px solid #666;
+  position: relative;
+}
+.content .top .pull {
+  width: 30%;
+  line-height: 44px;
+}
+.content .top .pull a {
+  font-size: 16px;
+  color: #666;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+.content .top .pull i {
+  position: absolute;
+  right: 14px;
+  top: 18px;
+}
+.content .top .pull ul {
+  display: none;
+  background: #FFF;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.content .top .pull ul li {
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  text-align: left;
+  font-family: "微软雅黑";
+  padding-left: 15px;
+}
+.content .down {
+  width: 100%;
+  background: #f1f1f1;
+  padding: 6px;
+}
+.content .down ul {
+  width: 100%;
+  margin: 0 auto;
+}
+.content .down ul li {
+  width: 50%;
+  float: left;
+  background: #f1f1f1;
+  padding: 6px;
+}
+.content .down ul li a {
+  background: #FFF;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+.content .down ul li a .title {
+  height: 16px;
+  font-size: 14px;
+  margin-top: 10px;
+  overflow: hidden;
+  margin-left: 5px;
+}
+.content .down ul li a .other {
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: red;
+}
+.content .down ul li a .other p {
+  margin-left: 10px;
+  font-size: 22px;
+}
+.content .down ul li a .other p em {
+  font-style: normal;
+}
+/*底部*/
+.bottom {
+  min-width: 230px;
+  height: 140px;
+  background-color: #f7f7f7;
+}
+.bottom .table {
+  height: 40px;
+}
+.bottom .table a {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #d5d5d5;
+}
+.bottom .down {
+  text-align: center;
+}
+.bottom .down .up {
+  font-size: 12px;
+  margin-top: 20px;
+}
+.bottom .down .up a {
+  display: inline;
+  color: red;
+  font-size: 16px;
+}
+.bottom .down .com {
+  margin-top: 10px;
+  font-size: 16px;
+}

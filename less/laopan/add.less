@@ -1,0 +1,171 @@
+@import '../base.less';
+
+/*头部*/
+
+.top {
+    width: 100%;
+    min-width: 350px;
+    height: 52px;
+    background-color: #ff841d;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    line-height: 65px;
+    .left {
+        width: 65px;
+        position: relative;
+        a {
+            width: 30px;
+            height: 30px;
+            background: url(../../images/icon_bar.png) no-repeat -206px -29px;
+            position: absolute;
+            left: 24px;
+            top: 12px;
+        }
+    }
+    .center {
+        flex: 8;
+        p {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 800;
+            font-family: "微软雅黑";
+        }
+    }
+    .right {
+        float: right;
+        width: 65px;
+        a {
+            position: relative;
+            img {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                right: 15px;
+                bottom: 5px;
+            }
+        }
+    }
+}
+
+
+/*内容*/
+
+.content {
+    width: 100%; // 筛选
+    .top {
+        height: 44px;
+        width: 100%;
+        background: #FFF;
+        position: relative;
+        border-bottom: 1px solid #666;
+        position: relative;
+        .pull {
+            width: 30%;
+            line-height: 44px;
+            a {
+                font-size: 16px;
+                // font-family: "微软雅黑";
+                color: #666;
+                position: relative;
+                -webkit-tap-highlight-color: transparent;
+                text-decoration: none;
+            }
+            i {
+                position: absolute;
+                right: 14px;
+                top: 18px;
+            }
+            ul {
+                display: none;
+                background: #FFF;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                li {
+                    border-bottom: 1px solid #ccc;
+                    font-size: 16px;
+                    text-align: left;
+                    font-family: "微软雅黑";
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+    .down {
+        width: 100%;
+        background: #f1f1f1;
+        padding: 6px;
+        ul {
+            width: 100%;
+            margin: 0 auto;
+            li {
+                width: 50%;
+                float: left;
+                background: #f1f1f1;
+                padding: 6px;
+                a {
+                    background: #FFF;
+                    -webkit-tap-highlight-color: transparent;
+                    text-decoration: none;
+                    .title {
+                        height: 16px;
+                        font-size: 14px;
+                        margin-top: 10px;
+                        overflow: hidden;
+                        margin-left: 5px;
+                    }
+                    .other {
+                        height: 30px;
+                        line-height: 30px;
+                        margin-top: 10px;
+                        font-size: 20px;
+                        color: red;
+                        p {
+                            margin-left: 10px;
+                            font-size: 22px;
+                            em {
+                                font-style: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*底部*/
+
+.bottom {
+    min-width: 230px;
+    height: 140px;
+    background-color: #f7f7f7;
+    .table {
+        height: 40px;
+        a {
+            width: 33.33%;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #d5d5d5;
+        }
+    }
+    .down {
+        text-align: center;
+        .up {
+            font-size: 12px;
+            margin-top: 20px;
+            a {
+                display: inline;
+                color: red;
+                font-size: 16px;
+            }
+        }
+        .com {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../less/brand/brand.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <header class="clearfix">
+        <div class="header_logo pull-left">
+            <a href="../index.html"> <img src="../images/header_logo.png" alt=""></a>
+        </div>
+        <div class="header_app pull-right">
+            <a href="#"> <img src="../images/header_app.png" alt=""></a>
+        </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </div>
+    <!-- 内容部分 -->
+    <div class="brand">
+        <!-- 导航 -->
+        <div id="" class="count_nav"><a class="" href="../index.html">首页</a>&nbsp;&nbsp;>
+            <a class="" href="#">品牌大全</a>
+        </div>
+        <div class="hot">热门平牌排行</div>
+        <ul class="hot-brand" id="brand">
+
+        </ul>
+    </div>
+    <!-- 底部 -->
+    <footer>
+
+        <div id="ctl00_footerApp">
+            <div class="foot_top">
+
+                <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+                <a href="reg.aspx">注册</a>
+                <a href="#">
+                    <span class="glyphicon glyphicon-arrow-up"></span> 返回顶部
+                </a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">
+            慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/template" id="brand-tpl">
+        {{each $data brand i}}
+        <li class="brand-btn"><a href="brand/brandGood.html?brandTitleId={{brand.brandTitleId}}">{{brand.brandTitle}}
+            <span class="glyphicon glyphicon-menu-down fr"></span>
+          </a></li>
+        {{/each}}
+    </script>
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/jquery/template-web.js"></script>
+    <script src="../js/brand/brand.js"></script>
+</body>
+
+</html>
