@@ -8,8 +8,7 @@ $.ajax({
     url: 'http://139.199.192.48:9090/api/getindexmenu',
     type: 'get',
     success: function(data) {
-        console.log(data)
-            // console.log(data);
+
         var html = template('menus_tlp', data.result);
         $('.menus_one').append(html);
         //点击显示和隐藏

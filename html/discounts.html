@@ -68,7 +68,14 @@
     </script>
     <script src="../lib/jquery/jquery.min.js"></script>
     <script src="../lib/jquery/template-web.js"></script>
-    <script src="../js/discouts.js"></script>
+    <script>
+        $.ajax({
+            url: 'http://139.199.192.48:9090/api/getcoupon',
+            success: function(data) {
+                $('#count_kfc').html(template('count_kfc_tpl', data.result));
+            }
+        });
+    </script>
 </body>
 
 </html>

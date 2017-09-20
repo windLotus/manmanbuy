@@ -63,7 +63,6 @@ header{
   padding-left: 10px;
   height: 36px;
   line-height: 36px;
-  margin-top:20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   background-color: @color_c;
@@ -87,24 +86,134 @@ header{
     .hot-brand{
       padding: 0px 10px;
       li{
+        border-bottom: 1px solid #ccc;
         a{
-          height: 40px;
-          line-height: 40px;
           color: #000;
           font-size: 16px;
           display: block;
-          padding-left: 0px;
-          border-bottom: 1px solid #ccc;
+          padding: 10px 0;
+          height: 55px;
+          p{
+            font-size: 12px;
+          }
+          #font-color{
+            color: #ccc;
+            font-size: 22px;
+          }
+          .number{
+            width: 20px;
+            height: 20px;
+            background-color:#555; 
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            // padding-left:7px;
+          }
+          .one{
+            background-color: red;
+          }
+          .two{
+            background-color: #ff9314;
+          }
+          .three{
+            background-color: #8adf5b;
+          }
+          .num-right{
+            padding-left: 5px;
+          }
         }
         span{
           color: #666;
           font-size: 16px;
           line-height: 40px;
-          padding-right: 20px;
+          // padding-right: 20px;
         }
       }
       
     }
+}
+//销量部分
+
+.content{
+  .lists{
+      .list{
+          width: 100%;
+         
+          display: flex;
+          border-bottom: 1px solid #ccc; 
+          .left{
+              display: inline-block;
+              // float: left;
+              margin-top: 10px;
+              margin-left: 10px;
+              img{
+                  width: 100px;
+                  height: 100px;
+              }
+          }
+          .right{
+            width: 100%;
+              display: inline-block;
+              // height: 100px;
+              // float: left;
+              margin-left: 5px;
+              margin-top: 20px;
+              .name{
+                  font-size: 16px;
+                
+              }
+              .money{
+               
+                font-size: 18px;
+                color: red;
+                .money-right{
+                  padding-right: 10px;
+                  img{
+                    width: 20px;
+                    
+                  }
+                }
+             
+              }
+              .shop{
+                  position: relative;
+                  span{
+                      font-size: 12px;
+                      color: #666;
+                  }
+                  
+                  // .icon{
+                  //     width: 50px;
+                  //     height: 24px;
+                  //     position: absolute;
+                  //     right: 0;bottom: 0;
+                  // }
+              }
+          }
+      }
+  }
+}
+
+// 评论部分
+.review{
+ 
+  li{
+   
+    color:#4f6900;
+    padding: 10px;
+    // img{
+    //   float: left;
+    // }
+    .review-content{
+      background-color:rgb(248, 248, 248);
+      padding: 10px;
+      .title{
+        img{
+          width: 20px;
+        }
+      }
+    }
+  }
 }
 // 底部
 #ctl00_footerApp{
@@ -122,7 +231,6 @@ header{
     width: 33.33%;
     border-right: 1px solid #ccc;
   }
- 
 }
 .footer{
 
@@ -135,4 +243,7 @@ header{
     margin: 0;
   }
 }
+}
+.veiw{
+  background-color: #ebebeb;
 }

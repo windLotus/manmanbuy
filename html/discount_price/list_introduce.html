@@ -24,7 +24,7 @@
     <!--头部国内折扣  -->
     <div class="discout_header">
         <div class="back">
-            <a href="../../index.html">
+            <a href="javascript:;" onClick="javascript :history.back(-1)">
                 <i class="glyphicon glyphicon-chevron-left"></i>
             </a>
         </div>
@@ -60,8 +60,6 @@
     </footer>
 
 
-
-
     <!--引擎模板渲染  -->
     <script type="text/template" id="comment_tlp">
         {{each $data dataValue i}}
@@ -77,10 +75,10 @@
             <!--图片和介绍  -->
             <div class="content">
                 <div class="samll_wrap">
-                    {{@dataValue.productImg}}
+                    {{@dataValue.productImg2}}
                 </div>
                 <div class="big_wrap">
-                    {{@dataValue.productImg}}
+                    {{@dataValue.productImg2}}
                 </div>
                 <div class="content_down">
                     <p>{{dataValue.productInfo}}</p>

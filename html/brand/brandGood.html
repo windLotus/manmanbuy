@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../less/brand/brand.css">
+    <link rel="stylesheet" href="../../less/brand/brandGood.css">
 </head>
 
 <body>
     <!-- 顶部 -->
     <header class="clearfix">
         <div class="header_logo pull-left">
-            <a href="#"> <img src="../../images/header_logo.png" alt=""></a>
+            <a href="../../index.html"> <img src="../../images/header_logo.png" alt=""></a>
         </div>
         <div class="header_app pull-right">
             <a href="#"> <img src="../../images/header_app.png" alt=""></a>
@@ -26,41 +26,129 @@
         <input type="button" value="搜索">
     </div>
     <!-- 内容部分 -->
-    <div class="brand">
-        <!-- 导航 -->
-        <div id="" class="count_nav"><a class="" href="#">首页</a>&nbsp;&nbsp;>
-            <a class="" href="#">品牌大全</a>&nbsp;&nbsp;>
-            <a class="" href="#">哪个牌子好</a>
+    <div class="veiw">
+        <div class="brand" id='brand-good'>
+
         </div>
-        <div class="hot">热门平牌排行</div>
-        <ul class="hot-brand">
-            <li><a href="javascript:;">品办点事
-                  <span class="glyphicon glyphicon-menu-down fr"></span>
-                </a></li>
-        </ul>
+        <div class="content">
+            <div class="hot">产品销量排行</div>
+            <ul class="lists" id="save-list">
+
+
+            </ul>
+        </div>
+        <div class="review">
+            <div class="hot">用户评论</div>
+            <ul id="review">
+
+            </ul>
+        </div>
+        <!-- 底部 -->
+        <footer>
+
+            <div id="ctl00_footerApp">
+                <div class="foot_top">
+
+                    <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+                    <a href="reg.aspx">注册</a>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-arrow-up"></span> 返回顶部
+                    </a>
+                </div>
+                <div class="footer">
+                    <p>
+                        <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">
+                                慢慢买手机版</a> -- 掌上比价平台</p>
+                    <p>
+                        m.manmanbuy.com
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
-    <!-- 底部 -->
-    <footer>
+    <script type="text/template" id="brand-good-tpl">
+        <!-- 导航 -->
+        <div id="" class="count_nav"><a class="" href="../../index.html">首页</a>&nbsp;&nbsp;>
+            <a class="" href="../brandTitle.html">品牌大全</a>&nbsp;&nbsp;>
+            <a class="" href="#">平板电视哪个牌子好</a>
+        </div>
+        <div class="hot">平板电视哪个牌子好</div>
+        <ul class="hot-brand" id="brand">
+            {{each $data good i}}
+            <li>
+                <a href="../getcategory/getcategory_Prolist.html?categoryId={{good.categoryId}}" class="clearfix">
+                    <span class="number fl {{i==0?'one':''}} {{i==1?'two':''}} {{i==2?'three':''}}">
+                        {{i+1}}</span>
+                    <div class="num-right fl">
+                        <div>
+                            {{good.brandName}}
+                        </div>
+                        <p>{{good.brandInfo}}</p>
+                    </div>
+                    <span id='font-color' class="glyphicon glyphicon-menu-right fr" data-id={{good.brandTitleId}}></span>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
 
-        <div id="ctl00_footerApp">
-            <div class="foot_top">
+    </script>
+    <script type="text/template" id="sales-tpl">
+        {{each $data sales i}}
+        <a href=" ../getcategory/getproduct.html?productId={{sales.productId}}">
+            <li class="list">
+                <div class="left">
+                    {{@sales.productImg}}
+                </div>
+                <div class="right">
+                    <div class="name">
+                        {{sales.productName}}
+                    </div>
+                    <div class='money'>
+                        {{sales.productPrice}}
+                        <div class='money-right fr'>
+                            <img class='fr' src="../../images/xingxing.svg" alt="" srcset="">
+                            <img class='fr' src="../../images/xingxing.svg" alt="" srcset="">
+                            <img class='fr' src="../../images/xingxing.svg" alt="" srcset="">
+                            <img class='fr' src="../../images/xingxing.svg" alt="" srcset="">
 
-                <a href="http://m.manmanbuy.com/login.aspx">登录</a>
-                <a href="reg.aspx">注册</a>
-                <a href="#">
-                    <span class="glyphicon glyphicon-arrow-up"></span> 返回顶部
+                            <img class='fr' src="../../images/xingxing.svg" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="shop">
+
+                        <span>{{sales.productQuote}} {{sales.productCom}}</span>
+                    </div>
+                </div>
+
+            </li>
+        </a>
+        {{/each}}
+    </script>
+    <script type="text/template" id="review-tpl">
+        {{each $data review i}}
+        <li>
+            <div class="review-content">
+                <a href="../getcategory/getproduct.html?productId={{review.productId}}">
+
+                    <div class="title clearfix">
+                        <span class='fl'>{{review.comName}}:</span>
+                        <img class='fl' src="../../images/xingxing.svg" alt="" srcset="">
+                        <img class='fl' src="../../images/xingxing.svg" alt="" srcset="">
+                        <img class='fl' src="../../images/xingxing.svg" alt="" srcset="">
+                        <img class='fl' src="../../images/xingxing.svg" alt="" srcset="">
+                        <img class='fl' src="../../images/xingxing.svg" alt="" srcset="">
+                        <span class="fr">{{review.comTime}}</span></div>
+                    <div class="content">{{review.comContent}}</div>
                 </a>
             </div>
-            <div class="footer">
-                <p>
-                    <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">
-                慢慢买手机版</a> -- 掌上比价平台</p>
-                <p>
-                    m.manmanbuy.com
-                </p>
-            </div>
-        </div>
-    </footer>
+
+        </li>
+        {{/each}}
+    </script>
+    <script src="../../js/common/unit.js"></script>
+    <script src="../../lib/jquery/jquery.min.js"></script>
+    <script src="../../lib/jquery/template-web.js"></script>
+    <script src="../../js/brand/brandGood.js"></script>
 </body>
 
 </html>

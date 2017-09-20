@@ -3,12 +3,13 @@ var id = getSearch()[1];
 
 //渲染数据
 if (id >= 20) {
+    // 省钱控数据渲染
     var url1 = 'http://139.199.192.48:9090/api/getmoneyctrlproduct'
     initPlus(url1);
 } else {
+    // 国内折扣价数据渲染
     var url2 = 'http://139.199.192.48:9090/api/getdiscountproduct';
     initPlus(url2);
-
 }
 
 // ajax请求数据并渲染方法封装

@@ -97,7 +97,6 @@ header .header_app img {
   padding-left: 10px;
   height: 36px;
   line-height: 36px;
-  margin-top: 20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   background-color: #ebebeb;
@@ -121,20 +120,98 @@ header .header_app img {
 .brand .hot-brand {
   padding: 0px 10px;
 }
+.brand .hot-brand li {
+  border-bottom: 1px solid #ccc;
+}
 .brand .hot-brand li a {
-  height: 40px;
-  line-height: 40px;
   color: #000;
   font-size: 16px;
   display: block;
-  padding-left: 0px;
-  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  height: 55px;
+}
+.brand .hot-brand li a p {
+  font-size: 12px;
+}
+.brand .hot-brand li a #font-color {
+  color: #ccc;
+  font-size: 22px;
+}
+.brand .hot-brand li a .number {
+  width: 20px;
+  height: 20px;
+  background-color: #555;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+}
+.brand .hot-brand li a .one {
+  background-color: red;
+}
+.brand .hot-brand li a .two {
+  background-color: #ff9314;
+}
+.brand .hot-brand li a .three {
+  background-color: #8adf5b;
+}
+.brand .hot-brand li a .num-right {
+  padding-left: 5px;
 }
 .brand .hot-brand li span {
   color: #666;
   font-size: 16px;
   line-height: 40px;
-  padding-right: 20px;
+}
+.content .lists .list {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.content .lists .list .left {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.content .lists .list .left img {
+  width: 100px;
+  height: 100px;
+}
+.content .lists .list .right {
+  width: 100%;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+.content .lists .list .right .name {
+  font-size: 16px;
+}
+.content .lists .list .right .money {
+  font-size: 18px;
+  color: red;
+}
+.content .lists .list .right .money .money-right {
+  padding-right: 10px;
+}
+.content .lists .list .right .money .money-right img {
+  width: 20px;
+}
+.content .lists .list .right .shop {
+  position: relative;
+}
+.content .lists .list .right .shop span {
+  font-size: 12px;
+  color: #666;
+}
+.review li {
+  color: #4f6900;
+  padding: 10px;
+}
+.review li .review-content {
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+.review li .review-content .title img {
+  width: 20px;
 }
 #ctl00_footerApp {
   background-color: #ebebeb;
@@ -161,4 +238,7 @@ header .header_app img {
 }
 #ctl00_footerApp .footer p a {
   font-size: 12px;
+}
+.veiw {
+  background-color: #ebebeb;
 }

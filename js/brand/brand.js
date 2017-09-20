@@ -7,13 +7,12 @@ $.ajax({
 $(document).on('click', '.brand-btn', function() {
 
     var id = $(this).attr('data-id');
-    console.log(id);
+    // console.log(id);
     $.ajax({
         url: 'http://139.199.192.48:9090/api/getbrand',
         data: { brandtitleid: id },
         success: function(data) {
             $('#brand').html(template('brand-good-tpl', data.result))
-
         }
     })
 })

@@ -23,7 +23,7 @@ $.ajax({
                 },
                 success: function(data) {
                     $('#commodity-list-tpl').html(template('commodity', data.result));
-                    console.log(data);
+                    // console.log(data);
                 }
             })
         }

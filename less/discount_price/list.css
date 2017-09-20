@@ -1,4 +1,3 @@
-@import '../getcategory_font/iconfont.css';
 * {
   margin: 0;
   padding: 0;
@@ -45,9 +44,7 @@ ul {
   color: #FFFFFF;
   height: 44px;
   width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1;
+  position: relative;
 }
 .discout_header .back {
   width: 50px;
@@ -56,20 +53,15 @@ ul {
   text-align: center;
   line-height: 44px;
 }
-.discout_header .back i {
-  color: #fff;
-}
 .discout_header h1 {
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
   margin: 0px 52px;
   height: 44px;
   position: absolute;
   top: 25%;
   left: 25%;
-}
-.discout_header h1 a {
-  font-size: 20px;
-  font-weight: bold;
 }
 .discout_header .home_app {
   height: 44px;
@@ -85,9 +77,6 @@ ul {
   height: 33px;
   width: 34px;
 }
-.list_content {
-  margin-top: 44px;
-}
 .list_content .row {
   box-sizing: border-box;
   background: #FFFFFF;
@@ -99,6 +88,7 @@ ul {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  margin-left: 40px;
 }
 .list_content .row a .col-xs-6 .img img {
   width: 50%;
@@ -120,6 +110,8 @@ ul {
   font-size: 14px;
   padding: 0 8px;
   text-align: left;
+  height: 20px;
+  overflow: hidden;
 }
 .list_content .row a .col-xs-6 .info {
   font-size: 14px;
@@ -130,13 +122,28 @@ ul {
   font-size: 12px;
   text-align: left;
 }
+.loadMore {
+  padding-top: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+footer p {
+  text-align: center;
+  margin: 0;
+  color: #5a5a5a;
+  font-size: 14px;
+}
+footer p a {
+  display: inline;
+}
+footer p:first-child a:first-child {
+  color: red;
+}
 .footer_nav {
   padding-top: 20px;
-  background: #efefef;
 }
 .footer_nav ul {
   width: 100%;
-  margin-bottom: 0px;
 }
 .footer_nav ul li {
   float: left;
@@ -152,10 +159,6 @@ ul {
 }
 .footer_nav ul li:last-child {
   border-right: none;
-}
-footer {
-  background: #efefef;
-  padding-top: 10px;
 }
 footer p {
   text-align: center;

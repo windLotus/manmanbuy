@@ -40,7 +40,7 @@
     <div class="list_nav">
         <ul class="clearfix list_nav_ul">
             <li> <a href="../../index.html">首页&nbsp;>&nbsp;</a></li>
-            <li> <a href="../category.html">全部分类&nbsp;>&nbsp;</a></li>
+            <li> <a href="javascript:;" onClick="javascript :history.back(-1)">全部分类&nbsp;>&nbsp;</a></li>
         </ul>
         <!-- 导航条模板 -->
         <input type="button" value="筛选">
@@ -99,7 +99,7 @@
     <script type="text/template" id="list_show_tpl">
         <ul>
             {{ each result pro i }}
-            <a href="./getproduct.html?productId={{pro.productId}}&brandName={{pro.brandName}}&categoryId={{pro.categoryId}}">
+            <a href="./getproduct.html?productId={{pro.productId}}&brandName={{pro.brandName}}">
                 <li>
                     <div class="media">
                         <div class="media-left">

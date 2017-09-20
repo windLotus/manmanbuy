@@ -2,11 +2,7 @@
   var id = getRequest('productId');
   // 获取链接传递的参数name
   var brandName = getRequest('brandName');
-  var categoryId = getRequest('categoryId');
 
-  // 导航栏的数据编辑
-  var href = './getcategory_Prolist.html?categoryId=' + categoryId;
-  $('.list_nav').children('ul').children('li').eq(1).children('a').attr('href', href);
   $('.list_nav').children('ul').children('li').eq(2).children('span').html(brandName);
 
 
@@ -34,21 +30,7 @@
       }
   });
 
-  /* // 获取页面链接的返回参数方法封装
-  function getSearch(key) {
-      var searchStr = location.search.slice(1); //获取链接传递的参数并且剪切掉?连接符
-      var searchArr = searchStr.split('&'); //以&连接符未为切割点来切割参数字符串组成数组
-      var searchObj = {},
-          teampArr;
-
-      for (var i = 0; i < searchArr.length; i++) {
-          teampArr = searchArr[i].split('=');
-          searchObj[teampArr[0]] = teampArr[1];
-      }
-      return key ? searchObj[key] : searchObj;
-
-  } */
-
+  //   获取链接的id值
   function getRequest(key) {
       var url = window.location.search; //获取url中"?"符后的字串
       var theRequest = new Object();
