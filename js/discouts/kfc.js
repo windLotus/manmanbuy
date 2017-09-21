@@ -8,20 +8,10 @@ $.ajax({
         couponid: id || 0
     },
     success: function(data) {
-        // 模板喧染
+        // 优惠券列表模板喧染
         $('#kfc_content').html(template('kfc_content_tpl', data.result));
-        var Arr = data.result;
-        var imgArr = [],
-            tempObj;
-        // 将所有图片组成一个json数据 供引擎模板使用
-        for (var i = 0; i <= Arr.length - 1; i++) {
-            var imgPath = Arr[i].couponProductImg;
-            imgArr.push({ img: imgPath });
-        };
-        var pathObj = { 'imgs': imgArr };
-
         // 轮播图的模板喧染
-        $('#coures-tpl').html(template('swiper-tpl', pathObj.imgs));
+        $('#coures-tpl').html(template('swiper-tpl', data.result));
 
         // 点击显示遮盖层与轮播图
         $(document).on('click', '.media', function() {
@@ -39,10 +29,9 @@ $.ajax({
                 // 获取索引值的变化,同步索引值
                 onSlideChangeEnd: function(swiper) {
                     imgId = swiper.activeIndex;
-                }
+                    // console.log(imgId);
+                },
             });
-
-
             $('.close').click(function() {
                 $(".cover").hide();
             })
